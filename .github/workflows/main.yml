@@ -14,9 +14,8 @@ jobs:
         with:
           python-version: '3.10'
           cache: 'pip'
-      - run: |
-          pip install -r requirements.txt
-          python scrape.py
+      - run: pip install -r requirements.txt
+      - run: python scrape.py
       - name: Commit Changes to Repository
         uses: stefanzweifel/git-auto-commit-action@v4
         with:

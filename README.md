@@ -1,3 +1,5 @@
+[![Update Data](https://github.com/shiruken/birdwatch-data/actions/workflows/main.yml/badge.svg)](https://github.com/shiruken/birdwatch-data/actions/workflows/main.yml)
+
 # Birdwatch Data
 
 Automated scraping of [Birdwatch](https://twitter.github.io/communitynotes/) data using GitHub Actions. Downloads the [daily data releases](https://twitter.com/i/communitynotes/download-data) from Twitter, runs the Birdwatch algorithm to score notes and users, and commits changes to the repository.

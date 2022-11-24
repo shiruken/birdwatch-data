@@ -1,11 +1,51 @@
-<h1>Available Files:</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Birdwatch Data</title>
+  <meta name="description" content="Daily Twitter Birdwatch data dump including notes and users scored using latest version of algorithm.">
+  <meta name="keywords" content="Twitter, Birdwatch, Community Notes, Data, Notes, Scored, Algorithm">
+  <meta name="author" content="Colin Sullender">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
 
-<ul>
-  <li><a href="notes-00000.tsv">Notes</a></li>
-  <li><a href="ratings-00000.tsv">Ratings</a></li>
-  <li><a href="noteStatusHistory-00000.tsv">Note Status History</a></li>
-  <li><a href="scoredNotes.tsv">Scored Notes</a></li>
-  <li><a href="helpfulnessScores.tsv">Scored Authors</a></li>
-</ul>
+    body { 
+      font-family: Helvetica, Arial, sans-serif;
+      line-height: 1.5;
+    }
+    
+    div {
+      margin: 16px;
+    }
+    
+    a {
+      color: #000000;
+    }
+    
+    a:hover {
+      color: #666666;
+    }
+    
+    ul {
+      font-size: large;
+    }
 
-See <a href="https://github.com/shiruken/birdwatch-data">GitHub repository</a> for full version histories
+  </style>
+</head>
+<body>
+  <div>
+    <h1>Birdwatch Data</h1>
+    <ul>
+      <li><a href="notes-00000.tsv" title="Download notes">Notes</a></li>
+      <li><a href="ratings-00000.tsv" title="Download ratings">Ratings</a></li>
+      <li><a href="noteStatusHistory-00000.tsv" title="Download note status history">Note Status History</a></li>
+      <li><a href="scoredNotes.tsv" title="Download scored notes">Scored Notes</a></li>
+      <li><a href="helpfulnessScores.tsv" title="Download author helpfulness scores">Scored Authors</a></li>
+    </ul>
+    <p>
+      Data files retrieved daily from <a href="https://twitter.com/i/birdwatch/download-data" title="View Birdwatch data page on Twitter">the Twitter website</a> at approximately 02:00 UTC. Notes and authors are scored using latest available version of the <a href="" title="View Birdwatch source code on GitHub">Birdwatch algorithm</a>. See <a href="https://github.com/shiruken/birdwatch-data" title="View on GitHub">GitHub repository</a> for historical data.
+    </p>
+    <img src="https://github.com/shiruken/birdwatch-data/actions/workflows/main.yml/badge.svg" alt="Birdwatch data update status badge" />
+  </div>
+</body>
+</html>

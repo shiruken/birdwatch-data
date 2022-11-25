@@ -9,6 +9,7 @@ Automated scraping of [Birdwatch](https://twitter.github.io/communitynotes/) dat
 * [Notes](https://shiruken.github.io/birdwatch-data/notes-00000.tsv)
 * [Ratings](https://shiruken.github.io/birdwatch-data/ratings-00000.tsv)
 * [Note Status History](https://shiruken.github.io/birdwatch-data/noteStatusHistory-00000.tsv)
+* [User Enrollment Status Data](https://shiruken.github.io/birdwatch-data/userEnrollment-00000.tsv)
 * [Scored Notes](https://shiruken.github.io/birdwatch-data/scoredNotes.tsv)*
 * [Scored Authors](https://shiruken.github.io/birdwatch-data/helpfulnessScores.tsv)*
 

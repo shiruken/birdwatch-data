@@ -24,7 +24,7 @@ jobs:
       - name: Run Model
         if: steps.scrape.outcome == 'success'
         run: |
-          sed -i 's/noteParams, _, _/noteParams, helpfulnessScores, _/g' communitynotes/static/sourcecode/main.py
+          sed -i 's/noteParams, _, _, _/noteParams, helpfulnessScores, _, _/g' communitynotes/static/sourcecode/main.py
           sed -i 's/process_data.write_scored_notes(noteParams)/process_data.write_scored_notes(noteParams)\n  helpfulnessScores.to_csv("helpfulnessScores.tsv", sep="\\t", index=False)/g' communitynotes/static/sourcecode/main.py
           python communitynotes/static/sourcecode/main.py
         continue-on-error: true  

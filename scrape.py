@@ -3,6 +3,7 @@ from datetime import datetime
 
 def download_file(url, filename):
     r = requests.get(url)
+    r.raise_for_status()
     with open(filename, 'w') as f:
         f.write(r.text)
 

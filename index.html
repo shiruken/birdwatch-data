@@ -18,6 +18,16 @@
       margin: 16px;
     }
     
+    h1 {
+      margin-bottom: 0px;
+    }
+
+    p#last_updated {
+      font-size: 10pt;
+      margin-top: 0px;
+      color: #666666;
+    }
+
     a {
       color: #000000;
     }
@@ -30,12 +40,28 @@
       font-size: large;
     }
 
+    a#timezone {
+      text-decoration: none;
+      border-bottom: 2px dotted;
+    }
+
   </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    $(document).ready(function() {
+      let url = "https://api.github.com/repos/shiruken/birdwatch-data/commits?path=scoredNotes.tsv&build.gradle&page=1&per_page=1";
+      $.getJSON(url, function(data) {
+        let last_updated = new Date(data[0]['commit']['committer']['date']);
+        $("#last_updated").text("Last Updated " + last_updated.toLocaleString());
+      });
+    });
+  </script>
   <script defer file-types="tsv" data-domain="shiruken.github.io/birdwatch-data,/shiruken.github.io" src="https://p.csullender.com/js/script.outbound-links.file-downloads.js"></script>
 </head>
 <body>
   <div>
     <h1>Birdwatch Data</h1>
+    <p id="last_updated"></p>
     <ul>
       <li><a href="notes-00000.tsv" title="Download notes">Notes</a></li>
       <li><a href="ratings-00000.tsv" title="Download ratings">Ratings</a></li>
@@ -45,7 +71,7 @@
       <li><a href="helpfulnessScores.tsv" title="Download author helpfulness scores">Scored Authors</a></li>
     </ul>
     <p>
-      Data files retrieved daily from <a href="https://twitter.com/i/birdwatch/download-data" title="View Birdwatch data page on Twitter">the Twitter website</a> at approximately 02:00 UTC. Notes and authors are scored using latest available version of the <a href="https://github.com/twitter/communitynotes/tree/main/static/sourcecode" title="View Birdwatch source code on GitHub">Birdwatch algorithm</a>. See <a href="https://github.com/shiruken/birdwatch-data" title="View on GitHub">GitHub repository</a> for historical data.
+      Data files retrieved daily from <a href="https://twitter.com/i/birdwatch/download-data" title="View Birdwatch data page on Twitter">the Twitter website</a> at approximately <a href="https://time.is/compare/0200_in_UTC" title="Convert 02:00 UTC to local timezone" id="timezone" target="_blank">02:00 UTC</a>. Notes and authors are scored using latest available version of the <a href="https://github.com/twitter/communitynotes/tree/main/static/sourcecode" title="View Birdwatch source code on GitHub">Birdwatch algorithm</a>. See <a href="https://github.com/shiruken/birdwatch-data" title="View on GitHub">GitHub repository</a> for historical data.
     </p>
     <img src="https://github.com/shiruken/birdwatch-data/actions/workflows/main.yml/badge.svg" alt="Birdwatch data update status badge" />
   </div>

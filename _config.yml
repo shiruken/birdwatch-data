@@ -1,1 +1,1 @@
-exclude: [communitynotes/, README.md, LICENSE.md, requirements.txt, scrape.py, *.tsv]
+exclude: [communitynotes/, README.md, LICENSE.md, requirements.txt, scrape.py, "*.tsv"]

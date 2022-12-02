@@ -7,7 +7,7 @@ Automated scraping of [Birdwatch](https://twitter.github.io/communitynotes/) dat
 ## Available Files
 
 * [Notes](https://shiruken.github.io/birdwatch-data/notes-00000.tsv)
-* [Ratings](https://shiruken.github.io/birdwatch-data/ratings-00000.tsv)
+* ~~Ratings~~ (File too large to track)
 * [Note Status History](https://shiruken.github.io/birdwatch-data/noteStatusHistory-00000.tsv)
 * [User Enrollment Status Data](https://shiruken.github.io/birdwatch-data/userEnrollment-00000.tsv)
 * [Scored Notes](https://shiruken.github.io/birdwatch-data/scoredNotes.tsv)*

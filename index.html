@@ -41,6 +41,10 @@
       font-size: large;
     }
 
+    span.del {
+      color: #999999;
+    }
+
   </style>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script>
@@ -68,7 +72,7 @@
     <p id="last_updated"></p>
     <ul>
       <li><a href="notes-00000.tsv" title="Download notes" target="_blank">Notes</a></li>
-      <li><del>Ratings</del> (File too large, no longer available)</li>
+      <li><del>Ratings</del> <span class="del">(File too large, no longer available)</span></li>
       <li><a href="noteStatusHistory-00000.tsv" title="Download note status history" target="_blank">Note Status History</a></li>
       <li><a href="userEnrollment-00000.tsv" title="Download user enrollment status data" target="_blank">User Enrollment Status Data</a></li>
       <li><a href="scoredNotes.tsv" title="Download scored notes" target="_blank">Scored Notes</a></li>

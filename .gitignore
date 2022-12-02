@@ -3,3 +3,6 @@ __pycache__
 
 .envrc
 .DS_Store
+
+ratings-00000.tsv
+

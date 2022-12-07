@@ -27,6 +27,7 @@ jobs:
           sed -i 's/noteParams, _, _, _/noteParams, helpfulnessScores, _, _/g' communitynotes/static/sourcecode/main.py
           sed -i 's/process_data.write_scored_notes(noteParams)/process_data.write_scored_notes(noteParams)\n  helpfulnessScores.to_csv("helpfulnessScores.tsv", sep="\\t", index=False)/g' communitynotes/static/sourcecode/main.py
           python communitynotes/static/sourcecode/main.py
+        continue-on-error: true
       - name: Commit Changes to Repository
         uses: stefanzweifel/git-auto-commit-action@v4
         with:

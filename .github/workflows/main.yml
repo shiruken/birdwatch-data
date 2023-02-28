@@ -24,8 +24,6 @@ jobs:
       - name: Run Model
         if: steps.scrape.outcome == 'success'
         run: |
-          sed -i 's/scoredNotes, _, _, _ /scoredNotes, helpfulnessScores, _, _/g' communitynotes/static/sourcecode/main.py
-          sed -i 's/process_data.write_tsv_local(scoredNotes, c.scoredNotesOutputPath)/process_data.write_tsv_local(scoredNotes, c.scoredNotesOutputPath)\n  helpfulnessScores.to_csv("helpfulnessScores.tsv", sep="\\t", index=False)/g' communitynotes/static/sourcecode/main.py
           python communitynotes/static/sourcecode/main.py
       - name: Commit Changes to Repository
         if: success() || failure()

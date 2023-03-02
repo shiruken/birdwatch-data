@@ -23,7 +23,7 @@ jobs:
         run: python scrape.py
       - name: Run Model
         if: steps.scrape.outcome == 'success'
-        run: python communitynotes/static/sourcecode/main.py
+        run: python communitynotes/sourcecode/main.py
       - name: Commit Changes to Repository
         if: success() || failure()
         uses: stefanzweifel/git-auto-commit-action@v4
